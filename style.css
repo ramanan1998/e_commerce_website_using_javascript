@@ -30,6 +30,9 @@ nav.navbar{
     justify-content: space-between;
     z-index: 2;
 }
+div.hamburger-icon{
+    display: none;
+}
 div.nav-list{
     margin-right: 50px;
 }
@@ -198,7 +201,24 @@ div.product-buybtn button{
 /* Mobile */
 
 @media (min-width: 320px) and (max-width: 480px) {
+
+    nav.navbar{
+        width: 90%;
+    }
     
+    div.logo i{
+        display: none;
+    }
+    div.hamburger-icon{
+        display: block;
+    }
+    div.nav-list{
+        display: none;
+    }
+    .login-btn{
+        min-width: 140px;
+    }
+
     
 
 }
