@@ -8,9 +8,12 @@
     <link rel="stylesheet" href="style.css">
     <title>Product</title>
 </head>
-<body>
+<body onload="showProductDetailDescription()">
     <nav class="navbar">
         <div class="logo" style="font-size: 25px;"><i class="fa-brands fa-opencart"></i> myKart</div>
+        <div class="hamburger-icon">
+            <i style="font-size: 25px;" class="fa-solid fa-bars"></i>
+        </div>
         <div class="nav-list">
             <ul>
                 <li class="nav-list list">About Us</li>
@@ -19,33 +22,21 @@
             </ul>
         </div>
     </nav>
-    
-    <div class="categories">
-        <ul>
-            <li class="category-type">Men</li>
-            <li class="category-type">Women</li>
-            <li class="category-type">Kids</li>
-            <li class="category-type">Electronics</li>
-            <li class="category-type">Mobiles</li>
-            <li class="category-type">Home</li>
-            <li class="category-type">Appliances</li>
-            <li class="category-type">Toys</li>
-        </ul>
-    </div>
-    <div class="space-div"></div>
 
     <section class="product-view-container">
         <div class="product-view">
-            <div class="product-view-image"><img src="./images/test_shirt.jpg" alt="model"></div>
+            <div class="product-view-image"><img src="" alt="product-img"></div>
             <div class="product-description-buybtn-container">
                 <div class="product-description">
-                    <h1 style="color: gray; text-transform: uppercase">men's clothing</h1>
-                    <h1 style="font-weight: 500;">Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops</h1>
-                    <div style="line-height: 20px;">
-                        <p>Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday</p>
-                    </div>
-                    <p style="font-size: 28px; color: green;"><i class="fa-solid fa-dollar-sign"></i> 109.95</p>
-                    <p style="font-size: 18px; cursor: pointer;"><i style="color: red;" class="fa-solid fa-star"></i> 5.0 <span>(60)</span></p>
+                    <h1 id="product-category" style="color: gray; text-transform: uppercase"></h1>
+                    <h1 id="product-title" style="font-weight: 500;"></h1>
+                    <p id="product-description" style="line-height: 25px;"></p>
+                    <p id="product-price" style="font-size: 28px; color: green;"></p>
+                    <div class="rating-container">
+                        <i style="color: red;" class="fa-solid fa-star"></i>
+                        <p id="product-rating" style="font-size: 18px; cursor: pointer;"></p>
+                        <p id="product-review-stat" style="color: gray; cursor: pointer"></p>
+                    </div>   
                 </div>
                 <div class="product-buybtn">
                     <button>Add to Cart</button>

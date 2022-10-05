@@ -16,7 +16,7 @@ a{
     color : black;
 }
 
-/* Login Page */
+/*Navigation Bar*/
 
 nav.navbar{
     position: fixed;
@@ -41,6 +41,11 @@ div.nav-list{
     padding: 0 25px;
     cursor: pointer;
 }
+.list:hover,.list a:hover{
+    color: #FF6666;
+}
+
+/* Login Page */
 
 div.login-container{
     padding: 90px;
@@ -84,8 +89,6 @@ input:focus,input:active{
     cursor: pointer;
 }
 
-/* Navgation Bar */
-
 div.categories{
     position: relative;
     background-color: white;
@@ -102,8 +105,12 @@ div.categories{
     list-style-type: none;
     justify-content: space-around;
 }
+
 li.category-type{
     cursor: pointer;
+}
+li.category-type:hover, li.category-type:focus{
+    color: #FF6666;
 }
 div.space-div{
     margin-top: 70px;
@@ -113,13 +120,13 @@ div.space-div{
 
 section.product-container{
     min-height: 100vh;
-    padding: 20px 10px;
+    padding: 50px 150px;
     display: grid;
-    grid-template-columns: auto auto auto auto auto;
-    gap: 20px;
+    grid-template-columns: auto auto auto auto;
+    gap: 25px;
 }
 div.product-category-box{
-    height: 400px;
+    height: 500px;
     max-width: 275px;
     background-color: white;
     border: var(--border-color);
@@ -127,6 +134,7 @@ div.product-category-box{
 }
 div.product-image{
     height: 75%;
+    padding: 15px;
     width: inherit;
     overflow: hidden;
 }
@@ -137,7 +145,7 @@ div.product-image img{
 }
 div.product-info{
     font-size: 15px;
-    height: 20%;
+    height: 25%;
     width: inherit;
     padding: 10px;
     line-height: 20px;
@@ -149,6 +157,7 @@ section.product-view-container{
     height: 70vh;
     max-width: 100%;
     padding: 10px 100px;
+    
 }
 div.product-view{
     background-color: white;
@@ -156,10 +165,18 @@ div.product-view{
     padding: 10px;
     display: flex;
     flex-direction: row;
+    margin-top: 70px;
+    border: var(--border-color);
 }
 div.product-view-image{
     min-width: 30%;
     height: inherit;
+    padding: 20px;
+    box-sizing: border-box;
+}
+div.product-view-image:hover{
+    border: var(--border-color);
+    cursor: pointer;
 }
 div.product-view-image img{
     width: 100%;
@@ -171,20 +188,29 @@ div.product-description-buybtn-container{
     min-width: 70%;
     height: inherit;
     padding: 20px;
+  
 }
 div.product-description{
-    height: 50%;
+    max-height: 80%;
     width: 100%;
     font-size: 16px;
     line-height: 40px;
+    
+}
+div.rating-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5px;
 }
 
 div.product-buybtn{
-    height: 25%;
+    height: 20%;
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: flex-start;
+    gap: 25px;
 }
 div.product-buybtn button{
     height: 60px;
