@@ -97,6 +97,9 @@ div.categories{
     border-bottom: var(--border-color);
     min-width: 100%;
 }
+div.down-slide-arrow{
+    display: none;
+}
 .categories ul{
     padding: 50px 150px;
     display: flex;
@@ -245,6 +248,70 @@ div.product-buybtn button{
         min-width: 140px;
     }
 
+    /* Home Page */
+
+    div.categories{         /*Need to take care later*/
+        height: 30px;
+        width: auto;
+    }
+    div.down-slide-arrow{
+        display: block;
+        position: relative;
+    }
+    div.down-slide-arrow i{
+        position: absolute;
+        left: 48%;
+    }
+    div.categories ul{ 
+        display: none;
+        flex-direction: column;
+        padding: 15px;
+        gap: 10px;
+    }
+    section.product-container{
+        padding: 10px;
+        grid-template-columns : auto auto;
+        gap: 10px;
+    }
+    div.product-category-box{
+        height: auto;
+        min-width: 120px;
+    }
+    div.product-image{
+        height: 150px;
+    }
+    div.product-info{
+        font-size: 12px;
+        line-height: 15px;
+        padding: 5px;
+    }
+    div.product-view{
+        flex-direction: column;
+    }
+    section.product-view-container{
+        height : auto;
+        width: 95vw;
+        padding: 10px;
+    }
+    div.product-view-image{
+        border: var(--border-color) ;
+    }
+    div.product-buybtn{
+        height: 60px;
+        justify-content: center;
+
+    }
+    div.product-buybtn button{
+        height: 40px;
+        min-width: 130px;
+    }
+    div.product-description-buybtn-container{
+        padding: 0;
+    }
+    div.product-description{
+        font-size: 13px;
+        line-height: 30px;
+    }
     
 
 }

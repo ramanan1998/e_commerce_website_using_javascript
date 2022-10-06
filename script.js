@@ -103,3 +103,18 @@ function loadFunctions(){                                       //this function 
     showProductsCategoryList();
     showProductsList();
 }
+
+function categorySlideForMobileView(){
+
+    const categoryDivHeight = document.querySelector(".categories");
+    const categoryUlDisplay = document.querySelector(".categories ul");
+    
+    if(categoryDivHeight.style.height == "30px" &&  categoryUlDisplay.style.display == "none"){
+        categoryDivHeight.style.height = "160px";
+        categoryUlDisplay.style.display = "flex";
+    }else{
+        categoryDivHeight.style.height = "30px";
+        categoryUlDisplay.style.display = "none";
+    }
+
+}
