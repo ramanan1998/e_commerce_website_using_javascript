@@ -83,28 +83,28 @@ async function showProductDetailDescription(){                  //Get the data f
     let productId = sessionStorage.getItem("productId");
     
     await(fetch(`https://fakestoreapi.com/products/${productId}`))
-     .then(res => res.json())
-     .then(json => {
+    .then(res => res.json())
+    .then(json => {
 
-        document.querySelector(".product-view-image img").src = json.image;
-        document.getElementById("product-category").innerHTML = json.category;
-        document.getElementById("product-title").innerHTML = json.title;
-        document.getElementById("product-description").innerHTML = json.description;
-        document.getElementById("product-price").innerHTML = `$ ${json.price}`;
-        document.getElementById("product-rating").innerHTML = json.rating.rate;
-        document.getElementById("product-review-stat").innerHTML = `(${json.rating.count})`;
+    document.querySelector(".product-view-image img").src = json.image;
+    document.getElementById("product-category").innerHTML = json.category;
+    document.getElementById("product-title").innerHTML = json.title;
+    document.getElementById("product-description").innerHTML = json.description;
+    document.getElementById("product-price").innerHTML = `$ ${json.price}`;
+    document.getElementById("product-rating").innerHTML = json.rating.rate;
+    document.getElementById("product-review-stat").innerHTML = `(${json.rating.count})`;
 
-     }).catch((err) => {
-        console.log(err);
-     })
+    }).catch((err) => {
+    console.log(err);
+    })
 }
 
-function loadFunctions(){                                       //this function should automatically when page loads, 
+function loadFunctions(){                                       //this function should load automatically when page loads, 
     showProductsCategoryList();
     showProductsList();
 }
 
-function categorySlideForMobileView(){
+function categorySlideForMobileView(){                                              //A simple slide to show the category in mobile view
 
     const categoryDivHeight = document.querySelector(".categories");
     const categoryUlDisplay = document.querySelector(".categories ul");
@@ -116,5 +116,14 @@ function categorySlideForMobileView(){
         categoryDivHeight.style.height = "30px";
         categoryUlDisplay.style.display = "none";
     }
+
+}
+
+function hamburgerIconClick(){
+    const clickIcon = document.querySelector(".hamburger-icon i");
+    const navMenu = document.querySelector(".nav-list");
+
+    clickIcon.classList.toggle("fa-x");
+    navMenu.style.display = "block";
 
 }

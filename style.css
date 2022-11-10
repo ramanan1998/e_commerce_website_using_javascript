@@ -11,6 +11,7 @@ body{
 }
 :root{
     --border-color : 1px solid #b2bdb5;
+    --primary-color : black;
 }
 a{
     color : black;
@@ -249,6 +250,21 @@ div.product-buybtn button{
     }
     div.nav-list{
         display: none;
+        background-color: #FCEEE9;
+        position: absolute;
+        top: 70px;
+        left: 130px;
+        border: var(--border-color);
+        min-height: 100vh;
+        min-width: 350px;
+        z-index: 3;
+        font-size: 25px;
+        padding: 25px 30px;
+    }
+    div.nav-list ul{
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
     }
     .login-btn{
         min-width: 140px;
