@@ -4,7 +4,7 @@ function loginUserByClick(){                                        //For user a
     const password = document.getElementById("password")
 
     if(username.value === "admin" && password.value === "12345" ){
-        location.href = "./home.html"
+        location.href = "./home"
     }else{
         alert("Invalid username or password")
     }
@@ -75,7 +75,7 @@ function showProductsList(event){                               //Views all the 
 function viewProductDescriptionPage(id){                        //it takes the user to product description page while clicks on any product
                                                        
     window.sessionStorage.setItem("productId", id);             //Setting product id in sessionStorage to use the id in product description page
-    location.href = "./product.html";
+    location.href = "./product";
     
 }
 
